@@ -1,14 +1,18 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Nav from "./Components/Nav/Nav";
 import BasalteHome from "./Components/BasalteHome/BasalteHome";
 
 function App() {
     return (
-        <div>
+        <BrowserRouter>
             <Nav />
-            <Route path="/BasalteHome" Component={BasalteHome} />
-        </div>
+            <Switch>
+                <Route path="/BasalteHome">
+                    <BasalteHome />
+                </Route>
+            </Switch>
+        </BrowserRouter>
     );
 }
 
